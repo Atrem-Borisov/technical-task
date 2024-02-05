@@ -22,7 +22,7 @@ public class BookService {
     public List<Book> getAllBooks(){
         return bookRepository.findAll();
     }
-
+    @Transactional
     public Book saveBook(String title, List<Author> authors){
         Book book = new Book();
         book.setTitle(title);
